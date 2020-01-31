@@ -30,15 +30,15 @@ class GrpcServiceTest {
   }
 
   @Test
-  void should_return_all_wishes(final Vertx vertx, VertxTestContext context) {
+  void tests_if_correctly_returns_data_from_the_event_bus(final Vertx vertx, VertxTestContext context) {
     // given
     final Promise<Output> promise = Promise.promise();
-    vertx.eventBus().consumer(Address.TEST_ADDRESS.get(), event -> {
+    vertx.eventBus().consumer(Address.TEST_ADDRESS.get(), event -> { // TODO remove test code when implementing storing profiles
       event.reply("BLABLA");
     });
 
     // when
-    grpcService.test(Input.newBuilder().build(), promise);
+    grpcService.test(Input.newBuilder().build(), promise); // TODO remove test code when implementing storing profiles
 
     // then
     promise.future().setHandler(event -> {

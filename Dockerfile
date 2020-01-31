@@ -14,7 +14,7 @@ RUN ./gradlew shadowJar
 
 FROM azul/zulu-openjdk-alpine:11-jre
 
-COPY --from=builder /usr/app/build/libs/wishservice-1.0.0-SNAPSHOT-fat.jar wishservice.jar
+COPY --from=builder /usr/app/build/libs/profileservice-1.0.0-SNAPSHOT-fat.jar profileservice.jar
 
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "profileservice.jar"]
