@@ -6,3 +6,17 @@
 [Appwish features map](https://app.creately.com/diagram/SB1Gc6cyHdD/view)
 
 ## Building
+
+To launch your tests:
+```bash
+./gradlew clean test
+```
+
+To run your application:
+```bash
+./gradlew clean run
+```
+
+## Qovery
+
+To [install Qovery CLI](https://docs.qovery.com/quickstart/sign-up)
