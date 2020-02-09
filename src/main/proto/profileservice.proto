@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.appwish.grpc";
+option java_outer_classname = "ProfileGRPC";
+
+service ProfileService {
+  // TODO remove test code when implementing storing profiles
+  rpc Test (Input) returns (Output) {
+  }
+}
+
+// TODO remove test code when implementing storing profiles
+message Input {
+}
+
+// TODO remove test code when implementing storing profiles
+message Output {
+  string output = 1;
+}
